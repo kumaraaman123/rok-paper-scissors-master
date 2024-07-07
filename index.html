@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Rock, Paper, Scissors, Lizard, Spock</title>
+  </head>
+  <body>
+    <div class="gameContainer">
+      <div class="header">
+        <div class="iconName">
+          <h1 class="rockName">rock</h1>
+          <h1 class="paperName">paper</h1>
+          <h1 class="scissorsName">scissors</h1>
+          <h1 class="lizardName">lizard</h1>
+          <h1 class="spockName">spock</h1>
+        </div>
+        <div class="score">
+          <div class="userScore">
+            <h1 class="scoreName">user score</h1>
+            <p class="scorePoint" id="userScore">0</p>
+          </div>
+          <div class="computerScore">
+            <h1 class="scoreName">computer score</h1>
+            <p class="scorePoint" id="computerScore">0</p>
+          </div>
+        </div>
+      </div>
+      <div class="iconContainer" id="iconContainer">
+        <div class="firstBox">
+          <button class="btnRock" onclick="userChoiceClick('rock')">
+            <i class="fa-solid fa-hand-back-fist"></i>
+          </button>
+        </div>
+        <div class="secondBox">
+          <div class="gameBtn">
+            <button class="btnPaper" onclick="userChoiceClick('paper')">
+              <i class="fa-solid fa-hand"></i>
+            </button>
+          </div>
+          <div class="gameBtn">
+            <button class="btnScissors" onclick="userChoiceClick('scissors')">
+              <i class="fa-solid fa-hand-scissors"></i>
+            </button>
+          </div>
+        </div>
+        <div class="thirdBox">
+          <div class="gameBtn">
+            <button class="btnLizard" onclick="userChoiceClick('lizard')">
+              <i class="fa-solid fa-hand-lizard"></i>
+            </button>
+          </div>
+          <div class="gameBtn">
+            <button class="btnSpock" onclick="userChoiceClick('spock')">
+              <i class="fa-solid fa-hand-spock"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="outputContainer" id="outputContainer">
+        <div class="msgBox">
+          <p class="msg" id="msg">You WIN</p>
+          <p id="userSelected"></p>
+          <p id="computerSelected"></p>
+          <button class="btnPlayAgain" onclick="init()">Play Again</button>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
